@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>�Ż�transform�ڹ���Ч���г�������ģ���Ͷ������� | 假装是雕像</title>
+  <title>优化transform在过渡效果中出现文字模糊和抖动问题 | 假装是雕像</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="��������Ŀ�ύ�����Բ��ŷ������������⣬���ٵ��������˵��ڹ���Ч���г�������ģ���Ͷ��������Թ����з��ֳ�IE 11��FireFox 54��û�г��ָ����⣬����Chrome�³����������⡣~~   ԭ��  ������Ϊ��transform�任�����������ϵ�������һ���滭�㲢���½">
+  <meta name="description" content="最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~   原因  这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="�Ż�transform�ڹ���Ч���г�������ģ���Ͷ�������">
+<meta property="og:title" content="优化transform在过渡效果中出现文字模糊和抖动问题">
 <meta property="og:url" content="http://yoursite.com/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/index.html">
 <meta property="og:site_name" content="假装是雕像">
-<meta property="og:description" content="��������Ŀ�ύ�����Բ��ŷ������������⣬���ٵ��������˵��ڹ���Ч���г�������ģ���Ͷ��������Թ����з��ֳ�IE 11��FireFox 54��û�г��ָ����⣬����Chrome�³����������⡣~~   ԭ��  ������Ϊ��transform�任�����������ϵ�������һ���滭�㲢���½">
+<meta property="og:description" content="最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~   原因  这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对">
 <meta property="og:image" content="http://img.blog.csdn.net/20170811165552829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzM4NDE0MzUy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-10T13:52:45.831Z">
+<meta property="og:updated_time" content="2017-10-10T13:56:55.691Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="�Ż�transform�ڹ���Ч���г�������ģ���Ͷ�������">
-<meta name="twitter:description" content="��������Ŀ�ύ�����Բ��ŷ������������⣬���ٵ��������˵��ڹ���Ч���г�������ģ���Ͷ��������Թ����з��ֳ�IE 11��FireFox 54��û�г��ָ����⣬����Chrome�³����������⡣~~   ԭ��  ������Ϊ��transform�任�����������ϵ�������һ���滭�㲢���½">
+<meta name="twitter:title" content="优化transform在过渡效果中出现文字模糊和抖动问题">
+<meta name="twitter:description" content="最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~   原因  这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170811165552829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzM4NDE0MzUy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternate" href="/atom.xml" title="假装是雕像" type="application/atom+xml">
@@ -72,7 +72,7 @@
         <section id="main"><article id="post-优化transform在过渡效果中出现文字模糊和抖动问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/" class="article-date">
-  <time datetime="2017-10-10T13:51:29.309Z" itemprop="datePublished">2017-10-10</time>
+  <time datetime="2017-10-10T13:56:55.689Z" itemprop="datePublished">2017-10-10</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      �Ż�transform�ڹ���Ч���г�������ģ���Ͷ�������
+      优化transform在过渡效果中出现文字模糊和抖动问题
     </h1>
   
 
@@ -91,26 +91,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>��������Ŀ�ύ�����Բ��ŷ������������⣬���ٵ��������˵��ڹ���Ч���г�������ģ���Ͷ��������Թ����з��ֳ�IE 11��FireFox 54��û�г��ָ����⣬����Chrome�³����������⡣~~</p>
+        <p>最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~</p>
 <p><img src="http://img.blog.csdn.net/20170811165552829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzM4NDE0MzUy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"></p>
 <blockquote>
-<p>ԭ��</p>
+<p>原因</p>
 </blockquote>
-<p>������Ϊ��transform�任�����������ϵ�������һ���滭�㲢���½�����Ⱦ��rotate��Ⱦ��ʱ��������ͼ����Ⱦ��ʱ��Ҳ��������Χ�����֣������߶�Ϊ���������ֿ��ܻ����ڰ������صļ������������������������ػ������Ż���Ⱦ�����Ա�Ե������ģ����������</p>
+<p>这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对这半个像素会进行优化渲染，所以边缘会出现模糊的情况。</p>
 <blockquote>
-<p>�Ż�����</p>
+<p>优化方法</p>
 </blockquote>
 <ol>
-<li>��transform: translate(-50%, -50%)�ĳ�transform: translate3d(-50%, -50%, 0)���Խ�������������Ȼģ����</li>
-<li>��Ԫ�صĸ߶�����Ϊż���ɽ�����</li>
-<li>��transform: translate(-50%, -50%)�е�y�ᵥλ�ĳ�pxҲ���Խ���</li>
-<li>�ĳ�transform: translate(-50%, -52%)Ҳ���Խ���������52%��������51%ÿ���ٷֱȳ��ԣ�<br>���Ϸ����ܽϴ��̶��Ż����⣬����ϸ�鿴����ϸ΢�������������˵����ַ�����</li>
+<li>将transform: translate(-50%, -50%)改成transform: translate3d(-50%, -50%, 0)可以解决抖动，但仍然模糊。</li>
+<li>将元素的高度设置为偶数可解决；</li>
+<li>将transform: translate(-50%, -50%)中的y轴单位改成px也可以解决</li>
+<li>改成transform: translate(-50%, -52%)也可以解决（如果52%不行则从51%每个百分比尝试）<br>以上方法能较大程度优化问题，但仔细查看仍有细微抖动，最后用了第四种方法。</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/" data-id="cj8lo2hbd00010kkxemgdg8a5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/" data-id="cj8lo82h90001eskx4yq74qdh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -159,7 +159,7 @@
       <ul>
         
           <li>
-            <a href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/">�Ż�transform�ڹ���Ч���г�������ģ���Ͷ�������</a>
+            <a href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/">优化transform在过渡效果中出现文字模糊和抖动问题</a>
           </li>
         
           <li>
