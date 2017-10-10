@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>假装是雕像</title>
+  <title>优化transform在过渡效果中出现文字模糊和抖动问题 | 假装是雕像</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="袁非凡的个人网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="假装是雕像">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~  原因这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对这半个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化transform在过渡效果中出现文字模糊和抖动问题">
+<meta property="og:url" content="http://yoursite.com/2017/10/10/优化transform模糊/index.html">
 <meta property="og:site_name" content="假装是雕像">
-<meta property="og:description" content="袁非凡的个人网站">
+<meta property="og:description" content="最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~  原因这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对这半个">
+<meta property="og:image" content="http://img.blog.csdn.net/20170811165552829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzM4NDE0MzUy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-10-10T14:13:55.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="假装是雕像">
-<meta name="twitter:description" content="袁非凡的个人网站">
+<meta name="twitter:title" content="优化transform在过渡效果中出现文字模糊和抖动问题">
+<meta name="twitter:description" content="最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~  原因这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对这半个">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170811165552829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzM4NDE0MzUy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternate" href="/atom.xml" title="假装是雕像" type="application/atom+xml">
   
@@ -66,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-优化transform模糊" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-优化transform模糊" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/10/优化transform模糊/" class="article-date">
   <time datetime="2017-10-10T14:13:55.910Z" itemprop="datePublished">2017-10-10</time>
@@ -81,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/优化transform模糊/">优化transform在过渡效果中出现文字模糊和抖动问题</a>
+    <h1 class="article-title" itemprop="name">
+      优化transform在过渡效果中出现文字模糊和抖动问题
     </h1>
   
 
@@ -109,55 +110,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/10/hello-world/" class="article-date">
-  <time datetime="2017-10-10T12:28:44.717Z" itemprop="datePublished">2017-10-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2017/10/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/10/hello-world/" data-id="cj8lotms00000qckxmv80a6ym" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
