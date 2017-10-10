@@ -57,7 +57,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/">优化transform在过渡效果中出现文字模糊和抖动问题</a>
+      <a class="article-title" href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/">�Ż�transform�ڹ���Ч���г�������ģ���Ͷ�������</a>
     </h1>
   
 
@@ -90,26 +90,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在项目提交后测试部门反馈这样的问题，在再点击下拉菜单在过渡效果中出现文字模糊和抖动。调试过程中发现除IE 11和FireFox 54下没有出现该问题，但在Chrome下出现上述问题。~~</p>
+        <p>��������Ŀ�ύ�����Բ��ŷ������������⣬���ٵ��������˵��ڹ���Ч���г�������ģ���Ͷ��������Թ����з��ֳ�IE 11��FireFox 54��û�г��ָ����⣬����Chrome�³����������⡣~~</p>
 <p><img src="http://img.blog.csdn.net/20170811165552829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzM4NDE0MzUy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"></p>
-<blockquote>
-<p>原因</p>
-</blockquote>
-<p>这是因为，transform变换会在浏览器上单独创建一个绘画层并重新进行渲染，rotate渲染的时候，由于图层渲染的时候也处理了周围的文字，如果高度为奇数的文字可能会存在半个像素的计算量，浏览器对这半个像素会进行优化渲染，所以边缘会出现模糊的情况。</p>
-<blockquote>
-<p>优化方法</p>
-</blockquote>
-<ol>
-<li>将transform: translate(-50%, -50%)改成transform: translate3d(-50%, -50%, 0)可以解决抖动，但仍然模糊。</li>
-<li>将元素的高度设置为偶数可解决；</li>
-<li>将transform: translate(-50%, -50%)中的y轴单位改成px也可以解决</li>
-<li>改成transform: translate(-50%, -52%)也可以解决（如果52%不行则从51%每个百分比尝试）<br>以上方法能较大程度优化问题，但仔细查看仍有细微抖动，最后用了第四种方法。</li>
+<h2 id="ԭ��"><a href="#ԭ��" class="headerlink" title="ԭ��"></a>ԭ��</h2><p>������Ϊ��transform�任�����������ϵ�������һ���滭�㲢���½�����Ⱦ��rotate��Ⱦ��ʱ��������ͼ����Ⱦ��ʱ��Ҳ��������Χ�����֣������߶�Ϊ���������ֿ��ܻ����ڰ������صļ������������������������ػ������Ż���Ⱦ�����Ա�Ե������ģ����������</p>
+<h2 id="�Z�����"><a href="#�Z�����" class="headerlink" title="�Ż�����"></a>�Ż�����</h2><ol>
+<li>��transform: translate(-50%, -50%)�ĳ�transform: translate3d(-50%, -50%, 0)���Խ�������������Ȼģ����</li>
+<li>��Ԫ�صĸ߶�����Ϊż���ɽ�����</li>
+<li>��transform: translate(-50%, -50%)�е�y�ᵥλ�ĳ�pxҲ���Խ���</li>
+<li>�ĳ�transform: translate(-50%, -52%)Ҳ���Խ���������52%��������51%ÿ���ٷֱȳ��ԣ�<br>���Ϸ����ܽϴ��̶��Ż����⣬����ϸ�鿴����ϸ΢�������������˵����ַ�����</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/" data-id="cj8lo82h90001eskx4yq74qdh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/" data-id="cj8lob96j0001bkkx506he6ga" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -154,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/10/hello-world/" data-id="cj8lo82gy0000eskxr2wsw7h1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/10/hello-world/" data-id="cj8lob9670000bkkxjjg8feaw" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -179,7 +173,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
     </div>
@@ -189,12 +183,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/">优化transform在过渡效果中出现文字模糊和抖动问题</a>
+            <a href="/2017/10/10/优化transform在过渡效果中出现文字模糊和抖动问题/">�Ż�transform�ڹ���Ч���г�������ģ���Ͷ�������</a>
           </li>
         
           <li>
